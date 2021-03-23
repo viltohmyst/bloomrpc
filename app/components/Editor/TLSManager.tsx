@@ -131,9 +131,9 @@ export function TLSManager({ selected, onSelected }: TLSManagerProps) {
             <Table.Column
               key="sslTarget"
               render={(text, certificate: Certificate) => {
-                if(certificate.useServerCertificate === true) {
-                  return <div />
-                }
+                // if(certificate.useServerCertificate === true) {
+                //  return <div />
+                //}
                 return (
                     <Input placeholder={"ssl target host"} defaultValue={certificate.sslTargetHost} onChange={(e) => {
                       const cert = setSslTargetHost(
