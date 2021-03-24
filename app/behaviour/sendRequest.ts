@@ -2,7 +2,7 @@ import { EventEmitter } from "events";
 import { credentials, Metadata, ServiceError } from "grpc";
 import { ProtoInfo } from "./protoInfo";
 import * as grpc from "grpc";
-import * as fs from "fs";
+// import * as fs from "fs";
 import { Certificate } from "./importCertificates";
 import * as grpcWeb from "grpc-web";
 
@@ -97,7 +97,7 @@ export class GRPCRequest extends EventEmitter {
           }
         }
 
-        md.add(key, Buffer.from(value, encoding));
+        md.add(key, Buffer.from(value, encoding as BufferEncoding));
       } else {
         md.add(key, metadata[key]);
       }
